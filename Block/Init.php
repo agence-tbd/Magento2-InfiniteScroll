@@ -150,7 +150,7 @@ class Init extends \Magento\Framework\View\Element\Template
     {
         $url = $this->getScrollConfig('design/loading_img');
         if (!empty($url)) {
-            $url = strpos($url, 'http') === 0 ? $url : $this->getSkinUrl($url);
+            $url = strpos($url, 'http') === 0 ? $url : $this->getViewFileUrl($url);
         }
         return empty($url) ? false : $url;
     }
